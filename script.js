@@ -37,23 +37,24 @@ const musicData = {
   }
 };
 
-
-
+/**
+ * 気分を切り替えるメイン関数
+ */
 function changeMood(mood) {
-
+  // 1. 背景(body)にクラスを付与
   document.body.className = mood;
   
-  
+  // 2. テキスト情報を書き換え
   document.getElementById('mood-text').innerText = mood.toUpperCase();
   document.getElementById('mood-message').innerText = musicData[mood].message;
   
-
+  // 3. プレイリストを生成
   const list = document.getElementById('playlist');
   list.innerHTML = ""; 
 
   musicData[mood].songs.forEach((song, index) => {
     const li = document.createElement('li');
-    
+    // ふわっと出るアニメーションのタイミングをずらす
     li.style.animationDelay = `${index * 0.1}s`;
     
     li.innerHTML = `
@@ -69,5 +70,5 @@ function changeMood(mood) {
   });
 }
 
-
+// HTML内のonclickから関数を呼べるようにグローバル化
 window.changeMood = changeMood;

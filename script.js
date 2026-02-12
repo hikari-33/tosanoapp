@@ -38,18 +38,18 @@ const musicData = {
 };
 
 function changeMood(mood) {
-  // 1. 背景とタイトルの更新
+  
   document.body.className = mood;
   document.getElementById('mood-text').innerText = mood.toUpperCase();
   document.getElementById('mood-message').innerText = musicData[mood].message;
   
-  // 2. プレイリストの生成
+ 
   const list = document.getElementById('playlist');
   list.innerHTML = ""; 
 
   musicData[mood].songs.forEach((song, index) => {
     const li = document.createElement('li');
-    // リストが1つずつ時間差で出てくる演出
+   
     li.style.animationDelay = `${index * 0.1}s`;
     li.innerHTML = `
       <a href="${song.url}" target="_blank" rel="noopener noreferrer">

@@ -1,1 +1,20 @@
+<div id="app">
+  <div class="container">
+    <p class="label">HOW ARE YOU FEELING?</p>
+    <h1 id="mood-text">SELECT MOOD</h1>
+    <p id="mood-message">今のあなたにぴったりの曲を届けます</p> 
+    
+    <div class="controls">
+      <button onclick="changeMood('heartful')">HEARTFUL</button>
+      <button onclick="changeMood('lonely')">LONELY</button>
+      <button onclick="changeMood('groove')">GROOVE</button>
+      <button onclick="changeMood('motivation')">MOTIVATION</button>
+    </div>
 
+    <div id="playlist-container">
+      <ul id="playlist">
+        <p class="placeholder">気分を選んでください</p>
+      </ul>
+    </div>
+  </div>
+</div>

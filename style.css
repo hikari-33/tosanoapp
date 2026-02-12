@@ -1,24 +1,25 @@
-
+:root {
+  /* HEARTFUL */
   --heartful-grad: linear-gradient(135deg, #ff9a9e 0%, #eebbcb 100%);
   --heartful-text: #4a4a4a;
 
- 
+  /* LONELY */
   --lonely-grad: linear-gradient(135deg, #223a70 0%, #1c305c 100%);
   --lonely-text: #ffffff;
 
- 
+  /* GROOVE */
   --groove-grad: linear-gradient(135deg, #8e2de2 0%, #990000 100%);
   --groove-text: #ffffff;
 
-
+  /* MOTIVATION */
   --motivation-grad: linear-gradient(135deg, #f83600 0%, #f39800 100%);
   --motivation-text: #ffffff;
 
-
+  /* 初期背景（黒） */
   --default-bg: #1a1a1a;
 }
 
-
+/* --- スタイル本体 --- */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
@@ -32,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-
+/* 背景切り替えクラス */
 body.heartful { background: var(--heartful-grad); color: var(--heartful-text); }
 body.lonely { background: var(--lonely-grad); color: var(--lonely-text); }
 body.groove { background: var(--groove-grad); color: var(--groove-text); }
